@@ -1,6 +1,5 @@
  -- This is a SQL script that creates a view need_meeting that lists all students
-
-DROP VIEW IF EXISTS need_meeting;
+-- Conditions score under 80 and last_meet null or more than month
 
 CREATE VIEW need_meeting
  AS

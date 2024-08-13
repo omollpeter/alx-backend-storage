@@ -1,0 +1,5 @@
+// This script inserts a document in the collection school
+const dbName = process.argv[2]
+use(dbName)
+db.createCollection("school")
+db.school.insertOne({name: "Holberton school"})

@@ -1,0 +1,1 @@
+### This folder contains scripts for Redis in-memory database

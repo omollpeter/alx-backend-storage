@@ -38,6 +38,19 @@ def call_history(method: Callable) -> Callable:
     return inputs_and_outputs
 
 
+def replay(store):
+    """
+    Displays the history of calls of a particular function
+    """
+    store_name = store.__qualname__
+    redis_db = store.__self__._redis
+
+    inputs_key = store_name + ":inputs"
+    outputs_key = store_name + ":outputs"
+
+    print(redis_db.lrange(inputs_key, 0, -1))
+
+
 class Cache:
     """
     Class Definition for Cache

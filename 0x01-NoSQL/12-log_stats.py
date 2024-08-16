@@ -40,5 +40,5 @@ if __name__ == "__main__":
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print("Methods:")
     for method in methods:
-        print(f"    method {method}: {get_log_count_by_method(ngx_col, method)}")
+        print(f"\tmethod {method}: {get_log_count_by_method(ngx_col, method)}")
     print(f"{count_status_checks(ngx_col)} status checks")

@@ -7,7 +7,7 @@ This is a program to provide some stats about Nginx logs stored in MongoDB
 from pymongo import MongoClient
 
 # Create a client for logs retrieval
-client = MongoClient("localhost", 27017)
+client = MongoClient("mongodb://127.0.0.1:27017")
 
 # Use the logs database
 db = client.logs

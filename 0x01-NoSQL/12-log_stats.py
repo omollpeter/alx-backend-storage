@@ -31,7 +31,7 @@ def count_status_checks(collection):
     """
     Returns number of status checks
     """
-    count = collection.count_documents({"path": "/status"})
+    count = collection.count_documents({"method": "GET", "path": "/status"})
     return count
 
 

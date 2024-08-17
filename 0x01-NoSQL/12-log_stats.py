@@ -42,3 +42,4 @@ if __name__ == "__main__":
     for method in methods:
         print(f"\tmethod {method}: {get_log_count_by_method(ngx_col, method)}")
     print(f"{count_status_checks(ngx_col)} status checks")
+    client.close()

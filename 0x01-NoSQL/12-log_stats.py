@@ -13,7 +13,7 @@ client = MongoClient("mongodb://127.0.0.1:27017")
 db = client.logs
 
 # Initialize the Nginx collections
-ngx_col = db.get_collection("nginx")
+ngx_col = db.nginx
 
 # Total log counts
 total_logs = ngx_col.count_documents({})

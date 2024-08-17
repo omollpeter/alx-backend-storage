@@ -8,6 +8,7 @@ top_students = __import__('101-students').top_students
 if __name__ == "__main__":
     client = MongoClient('mongodb://127.0.0.1:27017')
     students_collection = client.my_db.students
+    students_collection.delete_many({})
 
     j_students = [
         { 'name': "John", 'topics': [{ 'title': "Algo", 'score': 10.3 },{ 'title': "C", 'score': 6.2 }, { 'title': "Python", 'score': 12.1 }]},
